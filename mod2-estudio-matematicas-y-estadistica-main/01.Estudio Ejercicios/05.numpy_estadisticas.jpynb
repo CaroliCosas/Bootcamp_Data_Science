@@ -1,0 +1,2 @@
+Cargar el dataset FuelConsumptionCo2.csv en numpy
+lo habitual es cargarlo con pandas
