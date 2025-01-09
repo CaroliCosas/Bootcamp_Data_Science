@@ -11,3 +11,5 @@ scipy
 plotly
 folium
 openpyxl
+kaleido
+nbformat
