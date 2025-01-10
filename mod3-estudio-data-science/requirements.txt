@@ -13,3 +13,5 @@ folium
 openpyxl
 kaleido
 nbformat
+beautifulsoup4
+selenium
