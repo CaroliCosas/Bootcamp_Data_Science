@@ -82,3 +82,12 @@ Alternativas a MySQL Workbench: DBeaver, JetBrains DataGrip, Extensiones de visu
     * DELETE
 
 
+## CREAR UNA BASE DE DATOS:
+
+* opción 1: desde mysql workbench, pulsar clic derecho en Schemas, y Create Schema, Pulsar Apply Changes
+* opción 2: desde python ejecutar el código: CREATE SCHEMA .... 
+
+## CREAR TABLAS
+
+* opción 1: desde mysql workbench abrimos una base de datos, y donde pone Tables, pulsar clic derecho y Create table, esto abre un menú en el que permite agregar columnas y crear la tabla.
+* opción 2: desde python ejecutar código: CREATE TABLE ...
