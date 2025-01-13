@@ -54,3 +54,31 @@ python -m venv .mod4-sql
 * Bash: source .mod4-sql/Scripts/activate
 
 pip install -r requirements.txt
+
+## PARA TRABAJAR SQL DESDE PYTHON
+
+* No es necesario tener MySQL Workbench porque es un programa de interfaz de usuario para ver las bases de datos, no es el gestor de bases de datos en sí.
+
+* Lo que sí necesitamos tener en ejecución es el MySQL Community Server el cuál está instalado como servicio y se ejecuta en el arranque. Se puede ver en el administrador de tareas en Servicios si buscamos MySQL
+
+Alternativas a MySQL Workbench: DBeaver, JetBrains DataGrip, Extensiones de visual studio code.
+
+
+## TIPOS DE SENTENCIAS SQL
+
+* Data Definition Language (DDL): sentencias para crear bases de datos, crear tablas, modificar tablas, borrar tablas, borrar bases de datos. Ejemplo:
+    * CREATE SCHEMA
+    * CREATE TABLE
+    * ALTER TABLE
+    * DROP TABLE
+    * SHOW TABLES
+    * DROP DATABASE
+    * SHOW DATABASES
+
+* Data Manipulation Language (DDL): sentencias para crear y manipular datos dentro de las bases de datos:
+    * SELECT
+    * INSERT
+    * UPDATE
+    * DELETE
+
+
