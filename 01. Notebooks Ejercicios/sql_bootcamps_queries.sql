@@ -13,3 +13,12 @@
 - Muestra los 10 estudiantes que tenga más asistencias (_subqueries_).
 */
 
+use bootcamps;
+
+select 
+b.bootcamp as nombre_bootcamp, 
+count(e.estudiante_id) as numero_estudiantes
+from bootcamps b
+inner join estudiantes e on e.bootcamp_id = b.bootcamp_id
+group by b.bootcamp
+order by count(e.estudiante_id) desc; -- limit 1 para quedarse solo con el primero
