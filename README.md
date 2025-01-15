@@ -20,7 +20,7 @@ https://certidevs.com/tutorial-sql-mysql-instalacion
 * Seleccionar opción de instalación: Full
 * Type and networking lo dejamos tal cual en el puerto 3306
 * Authentication method lo dejamos tal cual está
-* Account and Roles: le escribimos una contraseña para el usuario root, por ejemplo: admin. No es necesario crear ningún otro usuario.
+* Account and Roles: le escribimos una contraseña para el usuario root, por ejemplo: admin (yo, Carolina, tenía la app instalada y tebnnía la contrasea 1234abcd). No es necesario crear ningún otro usuario.
 * en el resto de opciones le damos Execute y hacia delante
 
 Una vez instalado buscamos en nuestro ordenador la aplicación: MySQL Workbench.
@@ -29,7 +29,7 @@ Una vez instalado buscamos en nuestro ordenador la aplicación: MySQL Workbench.
 
 Programa de interfaz de usuario para conectarse a MySQL Server
 
-* Pulsar en Schemas
+* Pulsar en Schemas (por defecto viene mostrando administración)
 * Aparecerán las bases de datos: sys, sakila, world
 
 Sakila:
@@ -37,7 +37,7 @@ Sakila:
 * Desplegar la base de datos sakila
 * Desplegar sus tablas
 * Desplegar una tabla y ver sus columnas
-* Clic derecho en una tabla y hacer una consulta SELECT
+* Clic derecho en una tabla y hacer una consulta SELECT (equivale a hacer un select * tablas)
 
 Para ver modelo ER: 
 
@@ -48,7 +48,7 @@ Para ver modelo ER:
 
 ### PYTHON
 
-python -m venv .mod4-sql
+python -m venv .mod4-sql # para crear un entorno virtual limpio desde cero
 
 * Windows powershell: .mod4-sql\Scripts\activate
 * Bash: source .mod4-sql/Scripts/activate
@@ -61,7 +61,7 @@ pip install -r requirements.txt
 
 * Lo que sí necesitamos tener en ejecución es el MySQL Community Server el cuál está instalado como servicio y se ejecuta en el arranque. Se puede ver en el administrador de tareas en Servicios si buscamos MySQL
 
-Alternativas a MySQL Workbench: DBeaver, JetBrains DataGrip, Extensiones de visual studio code.
+Alternativas a MySQL Workbench: DBeaver (basada en eclipse), JetBrains DataGrip (de pago), Extensiones de visual studio code.
 
 
 ## TIPOS DE SENTENCIAS SQL
@@ -75,7 +75,7 @@ Alternativas a MySQL Workbench: DBeaver, JetBrains DataGrip, Extensiones de visu
     * DROP DATABASE
     * SHOW DATABASES
 
-* Data Manipulation Language (DDL): sentencias para crear y manipular datos dentro de las bases de datos:
+* Data Manipulation Language (DML): sentencias para crear y manipular datos dentro de las bases de datos:
     * SELECT
     * INSERT
     * UPDATE
