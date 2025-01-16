@@ -84,5 +84,68 @@ group by bootcamps.bootcamp
 order by sum(asistencias.asistencia) desc;
 
 -- ¿Qué fecha tiene el mayor número de asistencias y cual tiene el menor número de asistencias?
+select fecha, sum(asistencias.asistencia) as total_asistencias
+from asistencias
+group by fecha
+order by total_asistencias desc;
 
 
+-- ¿Cuales bootcamps le dan 10 al modulo de **Machine Learning**?
+select 
+b.bootcamp
+-- ,
+-- m.nombre,
+-- mb.puntuacion
+FROM
+modulos m
+inner JOIN 
+modulo_bootcamp mb on m.modulo_id = mb.modulo_id
+INNER JOIN
+bootcamps b on mb.bootcamp_id = b.bootcamp_id 
+where
+m.nombre = 'Machine Learning' and mb.puntuacion = 10;
+
+-- Muestra los 10 estudiantes que tenga más asistencias (_subqueries_).
+-- select dentro de select
+
+select * from estudiantes where estudiante_id in (
+ select estudiante_id from asistencias group by estudiante_id order by sum(asistencia) desc limit 10
+);
+     
+     
+/* AÑADIR EXPLAIN ANALYZE DELANTE PARA PROBAR
+-> Limit: 10 row(s)  (actual time=22047..22047 rows=10 loops=1)
+-> Sort: sum(a.asistencia) DESC, limit input to 10 row(s) per chunk  (actual time=22047..22047 rows=10 loops=1)
+-> Stream results  (cost=524705 rows=7232) (actual time=2.93..2197...
+*/
+EXPLAIN select e.estudiante_id, sum(a.asistencia) from estudiantes e 
+join asistencias a on e.estudiante_id = a.estudiante_id
+group by e.estudiante_id
+order by sum(a.asistencia) DESC
+limit 10;
+
+     
+     
+-- carolina
+/* AÑADIR EXPLAIN ANALYZE DELANTE PARA PROBAR
+-> Limit: 10 row(s)  (cost=120476..120476 rows=10) (actual time=19113..19113 rows=10 loops=1)
+-> Sort: subquery.total_asistencias DESC, limit input to 10 row(s) per chunk  (cost=120476..120476 rows=10) (actual time=19113..19113 rows=10 loops=1)
+...
+*/
+EXPLAIN SELECT 
+    estudiante_id, 
+    total_asistencias
+FROM (
+ SELECT 
+        a.estudiante_id, 
+        COUNT(a.asistencia) AS total_asistencias
+    FROM 
+        asistencias AS a
+    WHERE 
+        a.asistencia = 1
+    GROUP BY 
+        a.estudiante_id
+) AS subquery
+ORDER BY 
+    total_asistencias DESC
+LIMIT 10;

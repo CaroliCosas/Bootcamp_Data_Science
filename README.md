@@ -91,3 +91,31 @@ Alternativas a MySQL Workbench: DBeaver, JetBrains DataGrip, Extensiones de visu
 
 * opción 1: desde mysql workbench abrimos una base de datos, y donde pone Tables, pulsar clic derecho y Create table, esto abre un menú en el que permite agregar columnas y crear la tabla.
 * opción 2: desde python ejecutar código: CREATE TABLE ...
+
+
+## MODELOS DIAGRAMAS (Opcional)
+
+## Reverse Engineer
+
+Seleccionado la opción Database  y luego la opción Reverse Engineer.
+
+Seleccionamos la base de datos que queramos, por ejemplo bootcamps.
+
+Crear diagrama de la base de datos bootcamps.
+
+## Forward Engineer
+
+A partir de un modelo diagrama podemos pulsar Dabase y la opción Forward Engineer.
+
+Esto nos permite generar el SQL a partir de un diagrama existente.
+
+
+
+## ENUNCIADO EJERCICIO 
+
+### 1. 
+
+### 2. 
+
+### 3. 
+
