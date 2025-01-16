@@ -37,3 +37,22 @@ order by count(r.rental_id) desc limit 1
 
 -- 2. Encontrar la categoría con más películas.
 
+
+-- opcion1
+select * from category
+where category_id = (
+SELECT category_id FROM film_category
+group by category_id
+order by count(category_id) desc limit 1);
+
+
+-- opcion2
+select c.category_id, c.name, total_films
+from category c join (
+
+select category_id, count(*) as total_films
+from film_category 
+group by category_id
+order by total_films desc limit 1
+
+) as subquery on c.category_id = subquery.category_id;
