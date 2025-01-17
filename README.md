@@ -93,7 +93,10 @@ Alternativas a MySQL Workbench: DBeaver (basada en eclipse), JetBrains DataGrip 
 * opción 2: desde python ejecutar código: CREATE TABLE ...
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 301f08944816fa4dd49b8e3d062ccc0e13627788
 ## MODELOS DIAGRAMAS (Opcional)
 
 ## Reverse Engineer
@@ -292,5 +295,9 @@ Opcional: añadir alguna consulta con subconsultas o algo que no se abarque en l
 
 ### FORMATO ENTREGA:
 
+<<<<<<< HEAD
 m4_nombre_apellido.ipynb que tenga todo el código Python y todo el código SQL en el mismo archivo .ipynb para poder descargarlo mejor.
 
+=======
+m4_nombre_apellido.ipynb que tenga todo el código Python y todo el código SQL en el mismo archivo .ipynb para poder descargarlo mejor.
+>>>>>>> 301f08944816fa4dd49b8e3d062ccc0e13627788
