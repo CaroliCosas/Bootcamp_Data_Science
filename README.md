@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## ENTORNO
 
@@ -301,3 +302,15 @@ m4_nombre_apellido.ipynb que tenga todo el código Python y todo el código SQL 
 =======
 m4_nombre_apellido.ipynb que tenga todo el código Python y todo el código SQL en el mismo archivo .ipynb para poder descargarlo mejor.
 >>>>>>> 301f08944816fa4dd49b8e3d062ccc0e13627788
+=======
+Bootcamp Data Science de Hack A Boss
+2024-2025
+
+# Ejercicios de Visual Studio Code
+
+Módulos de Python, Numnpy, Pandas, seaborn, Matplotlib, etc
+
+MySQL y conexiones con Python
+
+
+>>>>>>> b59236ce8f7a505e701110ddc7cbad1b057f26f0
